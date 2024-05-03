@@ -182,7 +182,7 @@ mod app {
         // Build the pio program and set pin both for set and side set!
         // We are running with the default divider which is 1 (max speed)
         let out_pin_id = out_pin.id().num;
-        let (mut sm, _, tx) = PIOBuilder::from_program(installed)
+        let (mut sm, _, tx) = PIOBuilder::from_installed_program(installed)
             .out_pins(out_pin_id, 1)
             .side_set_pin_base(out_pin_id + 1)
             .build(sm0);
