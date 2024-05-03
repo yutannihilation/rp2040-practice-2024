@@ -15,6 +15,21 @@ panic-probe = { version = "0.3", features = ["print-defmt"] }
 
 # We're using a Pico by default on this template
 rp-pico = "0.9"
+pio = "0.2.1"
+pio-proc = "0.2.2"
+rtic = { git = "https://github.com/rtic-rs/rtic", version = "2.1.1", features = [
+    "thumbv6-backend",
+] }
+rtic-monotonics = { git = "https://github.com/rtic-rs/rtic", version = "2.0.0", features = [
+    "rp2040",
+] }
+# rtic = { path = "../rtic/rtic", version = "2.1.1", features = [
+#     "thumbv6-backend",
+# ] }
+# rtic-monotonics = { path = "../rtic/rtic-monotonics", version = "2.0.0", features = [
+#     "rp2040",
+# ] }
+panic-halt = "0.2.0"
 
 # but you can use any BSP. Uncomment this to use the pro_micro_rp2040 BSP instead
 # sparkfun-pro-micro-rp2040 = "0.8"
